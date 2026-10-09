@@ -1,0 +1,17 @@
+Link to an example: https://github.com/tsmatz/reinforcement-learning-in-llm/blob/master/01-rlhf-ppo.ipynb
+
+
+id = [bsz, l]
+rewards = [bsz, l]    bsz*[0,1,2,3,4,5,....end]
+values_old = [bsz, l] bsz*[0,1,2,3,4,5,....end]
+values_new = [bsz, l] bsz*[1,2,3,4,5,6,....end]
+
+for a sample S, reward value at index i = reward[S, i:] = [0,0,0,...,r]
+
+R[i]          = [0,0,0,...,r]
+vl_next[i+1]  = [q,q,q,...,q]
+vl_old[i]     = [q,q,q,...,q]
+
+
+NOTE:
+- the actual shape of params such as reward, value, advantage, etc ... is a vector not a scalar number
